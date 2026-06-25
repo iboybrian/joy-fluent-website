@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile Menu Logic
-  const menuButton = document.querySelector('button[aria-label="Open menu"]');
+  const menuButton = document.querySelector('.hamburger-btn');
   const mobileDrawer = document.getElementById('mobile-menu-drawer');
   const closeButton = document.getElementById('mobile-menu-close');
 
@@ -40,10 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const trigger = item.querySelector('.faq-trigger');
     if (trigger) {
       trigger.addEventListener('click', () => {
-        // Toggle active class on clicked item
         const isActive = item.classList.contains('active');
         
-        // Close other open FAQ items (optional, but premium feel)
         faqItems.forEach(otherItem => {
           if (otherItem !== item) {
             otherItem.classList.remove('active');
@@ -61,29 +59,120 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Track active page in navigation
   const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll('nav a, .mobile-menu-links a');
+  const navLinks = document.querySelectorAll('.nav-links a, .mobile-menu-links a');
   
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href) {
-      // Check if current path ends with href or matches exactly
-      const isHome = currentPath === '/' || currentPath === '/index.html';
+      const isHome = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('index.html') || currentPath === '';
       const linkIsHome = href === '/' || href === '/index.html' || href === 'index.html';
       
       if (linkIsHome && isHome) {
         link.classList.add('active');
-        // Add borders/classes for original designs
-        if (link.tagName === 'A' && !link.classList.contains('gold-gradient-bg')) {
-          link.style.borderBottom = '2px solid hsl(var(--primary))';
-          link.style.color = 'hsl(var(--foreground))';
-        }
       } else if (!linkIsHome && href !== '#' && (currentPath.includes(href) || window.location.href.includes(href))) {
         link.classList.add('active');
-        if (link.tagName === 'A' && !link.classList.contains('gold-gradient-bg')) {
-          link.style.borderBottom = '2px solid hsl(var(--primary))';
-          link.style.color = 'hsl(var(--foreground))';
-        }
       }
     }
   });
+
+  // Scroll-Triggered Fade-In Animations (Intersection Observer)
+  const observerOptions = {
+    root: null, // viewport
+    rootMargin: '0px 0px -8% 0px', // trigger slightly before entering fully
+    threshold: 0.08
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate only once
+      }
+    });
+  }, observerOptions);
+
+  const animatedElements = document.querySelectorAll('.fade-in-on-scroll');
+  animatedElements.forEach(el => observer.observe(el));
+
+  // Testimonials Infinite Horizontal Auto-Carousel
+  const track = document.querySelector('.carousel-track');
+  if (track) {
+    const originalCards = Array.from(track.children);
+    const cardCount = originalCards.length;
+    
+    if (cardCount > 0) {
+      // Determine visible cards based on viewport
+      const getVisibleCount = () => window.innerWidth >= 768 ? 2 : 1;
+      
+      // Infinite loop preparation: Clone first few cards and append to the end
+      let visibleCount = getVisibleCount();
+      for (let i = 0; i < visibleCount; i++) {
+        const clone = originalCards[i].cloneNode(true);
+        // Ensure clone also runs scroll animations or is immediately visible
+        clone.classList.add('visible');
+        track.appendChild(clone);
+      }
+      
+      let currentIndex = 0;
+      let isTransitioning = false;
+      const slideDuration = 800; // ms (must match CSS transition duration)
+      
+      const slide = () => {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        
+        currentIndex++;
+        
+        // Recalculate card width on every slide to support responsive resizes
+        const cardWidth = track.firstElementChild.getBoundingClientRect().width;
+        
+        // Smooth slide transition
+        track.style.transition = `transform ${slideDuration}ms cubic-bezier(0.4, 0, 0.2, 1)`;
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        
+        if (currentIndex === cardCount) {
+          // Reset to beginning instantly after transition completes
+          setTimeout(() => {
+            track.style.transition = 'none';
+            currentIndex = 0;
+            track.style.transform = 'translateX(0)';
+            isTransitioning = false;
+          }, slideDuration);
+        } else {
+          setTimeout(() => {
+            isTransitioning = false;
+          }, slideDuration);
+        }
+      };
+      
+      // Auto-play interval (slow, elegant 4.5 seconds per slide)
+      let slideInterval = setInterval(slide, 4500);
+      
+      // Handle window resizes: Recalculate layout and reset position if necessary
+      window.addEventListener('resize', () => {
+        clearInterval(slideInterval);
+        
+        // Remove old cloned nodes (anything past original cards)
+        while (track.children.length > cardCount) {
+          track.removeChild(track.lastChild);
+        }
+        
+        // Re-clone based on new viewport width
+        visibleCount = getVisibleCount();
+        for (let i = 0; i < visibleCount; i++) {
+          const clone = originalCards[i].cloneNode(true);
+          clone.classList.add('visible');
+          track.appendChild(clone);
+        }
+        
+        // Reset track position
+        track.style.transition = 'none';
+        currentIndex = 0;
+        track.style.transform = 'translateX(0)';
+        isTransitioning = false;
+        
+        slideInterval = setInterval(slide, 4500);
+      });
+    }
+  }
 });
