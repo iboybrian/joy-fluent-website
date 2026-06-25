@@ -175,4 +175,55 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // Counter Animation Engine (Ease-Out Deceleration)
+  const counters = document.querySelectorAll('.counter');
+  
+  if (counters.length > 0) {
+    const counterObserverOptions = {
+      root: null,
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          const targetVal = parseInt(counter.getAttribute('data-target'), 10);
+          animateValue(counter, 0, targetVal, 2000); // 2000ms duration (2 seconds)
+          counterObserver.unobserve(counter);
+        }
+      });
+    }, counterObserverOptions);
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+  }
+  
+  function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      
+      // Deceleration curve (easeOutQuad)
+      const easeProgress = progress * (2 - progress);
+      const currentVal = Math.floor(easeProgress * (end - start) + start);
+      
+      // Format number with commas for values >= 1000
+      if (end >= 1000) {
+        obj.textContent = currentVal.toLocaleString();
+      } else {
+        obj.textContent = currentVal;
+      }
+      
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        // Ensure final value is exact and formatted
+        obj.textContent = end.toLocaleString();
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
 });
