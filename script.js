@@ -34,6 +34,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Navbar Scroll Effect
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        navbar.classList.remove('navbar-transparent');
+      } else {
+        // Only re-apply transparent class if the navbar originally has it (meaning it's the homepage navbar)
+        if (navbar.hasAttribute('data-transparent')) {
+          navbar.classList.add('navbar-transparent');
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Run once on load
+  }
+
   // FAQ Accordion Logic
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
@@ -73,6 +90,15 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.add('active');
       }
     }
+  });
+
+  // Dynamic Stagger for Sibling Cards
+  const grids = document.querySelectorAll('.grid, .carousel-track');
+  grids.forEach(grid => {
+    const animatedChildren = grid.querySelectorAll(':scope > .fade-in-on-scroll');
+    animatedChildren.forEach((child, index) => {
+      child.style.transitionDelay = `${index * 150}ms`;
+    });
   });
 
   // Scroll-Triggered Fade-In Animations (Intersection Observer)
