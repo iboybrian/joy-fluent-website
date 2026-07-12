@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="assets/joy-fluent-logo.png">
   <link rel="apple-touch-icon" href="assets/joy-fluent-logo.png">
   <meta name="description" content="Joy Fluent is Lindsay R. Watson's consulting firm — helping founders, small businesses, and nonprofits build strategy, systems, and sustainable growth. Based in Lehigh Valley, PA.">
-  
+
   <!-- OG & Twitter Meta Tags -->
   <meta property="og:title" content="Joy Fluent | Strategy & Consulting for Founders | Lindsay R. Watson">
   <meta property="og:description" content="Joy Fluent is Lindsay R. Watson's consulting firm — helping founders, small businesses, and nonprofits build strategy, systems, and sustainable growth. Based in Lehigh Valley, PA.">
@@ -16,521 +16,544 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Joy Fluent | Strategy & Consulting for Founders | Lindsay R. Watson">
   <meta name="twitter:description" content="Joy Fluent is Lindsay R. Watson's consulting firm — helping founders, small businesses, and nonprofits build strategy, systems, and sustainable growth. Based in Lehigh Valley, PA.">
-  
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation Header -->
-  <nav class="navbar navbar-transparent" data-transparent>
-    <div class="navbar-container">
+  <!-- ==========================================
+       NAVIGATION
+       ========================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
       <a href="index.html" class="navbar-logo" aria-label="Joy Fluent home">
-        <img alt="Joy Fluent" class="h-14 md:h-16 w-auto" src="assets/joy-fluent-logo.png">
+        <img src="assets/joy-fluent-logo.png" alt="Joy Fluent">
       </a>
-      <div class="navbar-menu-desktop nav-links">
-        <a href="index.html" class="active">Home</a>
+      <div class="navbar-links">
+        <a href="index.html">Home</a>
         <a href="start.html">Start Here</a>
         <a href="roadmaps.html">Roadmaps</a>
         <a href="solutions.html">Solutions</a>
         <a href="about.html">About</a>
         <a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer">Lindsay R. Watson</a>
         <a href="contact.html">Contact</a>
-        <a href="https://www.honeybook.com/widget/joy_fluent_llc_262509/cf_id/5fde792f3f13d2619dc9c4b0" target="_blank" rel="noopener noreferrer" class="get-started-btn">Get Started</a>
+        <a href="https://calendar.app.google/r31ephYiBzL6X2QCA" target="_blank" rel="noopener noreferrer" class="nav-cta">Get Started</a>
       </div>
-      <div class="navbar-toggle-mobile">
-        <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Open menu" class="hamburger-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu w-7 h-7"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-        </button>
-      </div>
+      <button class="navbar-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
     </div>
   </nav>
 
-  <!-- Mobile Menu Drawer -->
-  <div id="mobile-menu-drawer" class="mobile-drawer">
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
     <div class="mobile-drawer-content">
-      <button id="mobile-menu-close" class="mobile-drawer-close" aria-label="Close menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-7 h-7"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+      <button class="mobile-drawer-close" id="drawer-close" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
       </button>
       <div class="mobile-menu-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="start.html">Start Here</a>
         <a href="roadmaps.html">Roadmaps</a>
         <a href="solutions.html">Solutions</a>
         <a href="about.html">About</a>
         <a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer">Lindsay R. Watson</a>
         <a href="contact.html">Contact</a>
-        <a href="https://www.honeybook.com/widget/joy_fluent_llc_262509/cf_id/5fde792f3f13d2619dc9c4b0" target="_blank" rel="noopener noreferrer" class="get-started-btn">Get Started</a>
+        <a href="https://calendar.app.google/r31ephYiBzL6X2QCA" target="_blank" rel="noopener noreferrer" class="nav-cta">Get Started</a>
       </div>
     </div>
   </div>
 
-  <!-- Hero Section -->
-  <section class="relative w-full overflow-hidden hero-premium flex items-center py-16 md:py-20">
-    <div class="absolute inset-0 w-full h-full">
-      <img src="assets/home-hero-meeting.jpg" alt="Diverse team in a successful business strategy meeting around a roadmap" class="w-full h-full object-cover" width="1920" height="1080">
-      <div class="absolute inset-0 hero-overlay-premium"></div>
+  <!-- ==========================================
+       HERO — Editorial Typographic
+       ========================================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+      <div class="hero-grid-overlay"></div>
     </div>
-    <div class="relative w-full section-padding">
-      <div class="max-w-6xl mx-auto">
-        <div class="max-w-3xl mx-auto text-center">
-          <p class="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 hero-fade-in-up">Clarity. Connection. Momentum.</p>
-          <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-normal leading-[1.05] mb-6 text-white hero-fade-in-up-delayed">
-            <span class="text-accent">Strategy.</span> Systems. <span class="italic gold-gradient-text">Results.</span>
-          </h1>
-          <p class="text-lg md:text-xl text-white/80 hero-subheadline-premium font-body font-light leading-relaxed mb-10 hero-fade-in-up-delayed">
-            Joy Fluent is Lindsay R. Watson's consulting firm — helping founders, small businesses, and nonprofits build the strategy, systems, and infrastructure to grow with confidence.
-          </p>
-          <div class="flex justify-center hero-fade-in-up-delayed-more">
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="roadmaps.html" class="inline-flex items-center justify-center btn-premium-accent btn-swipe-effect btn-swipe-coral px-8 py-4 rounded-md font-body font-semibold text-sm tracking-wide uppercase"><span>Explore Roadmaps</span></a>
-              <a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center btn-premium-outline-white btn-swipe-effect btn-swipe-outline-white px-8 py-4 rounded-md font-body font-semibold text-sm tracking-wide uppercase"><span>Work With Lindsay</span></a>
-            </div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Clarity. Connection. Momentum.</p>
+        <h1 class="hero-title">
+          Strategy. Systems.<br>
+          <span class="accent-word">Results.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Joy Fluent is Lindsay R. Watson's consulting firm — helping founders, small businesses, and nonprofits build the strategy, systems, and infrastructure to grow with confidence.
+        </p>
+        <div class="hero-cta-group btn-group">
+          <a href="roadmaps.html" class="btn btn-coral">Explore Roadmaps</a>
+          <a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">Work With Lindsay</a>
+        </div>
+      </div>
+
+      <div class="hero-carousel-wrapper">
+        <div class="hero-carousel-slides">
+          <div class="hero-slide active blend-mask">
+            <img src="assets/lindsay-headshot-home.jpeg" alt="Lindsay R. Watson, Founder of Joy Fluent">
+          </div>
+          <div class="hero-slide">
+            <img src="assets/home-hero-meeting.jpg" alt="Joy Fluent strategy session">
           </div>
         </div>
       </div>
     </div>
+
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="hero-scroll-line"></div>
+      <span class="hero-scroll-text">Scroll</span>
+    </div>
   </section>
 
-  <!-- The Approach Section -->
-  <section class="section-padding bg-background">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16 fade-in-on-scroll">
-        <p class="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 text-center">The Joy Fluent Approach</p>
-        <h2 class="text-3xl md:text-5xl font-display font-light leading-tight max-w-3xl mx-auto">From Where You Are to Where You Want to Be</h2>
+  <!-- ==========================================
+       STATS TRUST BAR
+       ========================================== -->
+  <section class="stats-bar">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <p class="stat-number"><span class="counter" data-target="20">20</span>+</p>
+        <p class="stat-label">Years of Experience</p>
+        <p class="stat-desc">Joy Fluent is built on decades of real-world experience helping organizations grow, adapt, and thrive.</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-12">
-        <div class="text-center fade-in-on-scroll">
-          <h3 class="font-display text-3xl md:text-4xl font-light text-foreground mb-4">Clarity</h3>
-          <div class="w-12 h-0.5 bg-accent mx-auto mb-5"></div>
-          <p class="font-body text-muted-foreground leading-relaxed">We start by getting clear on where you are, where you want to go, and what is getting in the way. No more spinning your wheels.</p>
+      <div class="stat-item reveal">
+        <p class="stat-number"><span class="counter" data-target="40000">40,000</span>+</p>
+        <p class="stat-label">Conversations</p>
+        <p class="stat-desc">Our founder has conducted over 40,000 professional interviews. That depth of listening shapes everything we do.</p>
+      </div>
+      <div class="stat-item reveal">
+        <p class="stat-number">100%</p>
+        <p class="stat-label">Built for Real Organizations</p>
+        <p class="stat-desc">We work with founders, nonprofits, and growing teams — not just enterprise clients. Practical, personal, proven.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE APPROACH — Numbered Editorial
+       ========================================== -->
+  <section class="section bg-white">
+    <div class="section-header center">
+      <p class="eyebrow">The Joy Fluent Approach</p>
+      <h2>From Where You Are to Where You Want to <em class="accent-coral">Be</em></h2>
+    </div>
+
+    <div class="approach-grid">
+      <div class="approach-item reveal">
+        <div class="approach-number">01</div>
+        <div class="approach-text">
+          <h3>Clarity</h3>
+          <p class="text-body">We start by getting clear on where you are, where you want to go, and what is getting in the way. No more spinning your wheels.</p>
         </div>
-        <div class="text-center fade-in-on-scroll">
-          <h3 class="font-display text-3xl md:text-4xl font-light text-foreground mb-4">Connection</h3>
-          <div class="w-12 h-0.5 bg-accent mx-auto mb-5"></div>
-          <p class="font-body text-muted-foreground leading-relaxed">We connect you with the right strategies, tools, people, and resources for your specific goals. Everything is intentional.</p>
+      </div>
+
+      <div class="approach-item reveal">
+        <div class="approach-number">02</div>
+        <div class="approach-text">
+          <h3>Connection</h3>
+          <p class="text-body">We connect you with the right strategies, tools, people, and resources for your specific goals. Everything is intentional.</p>
         </div>
-        <div class="text-center fade-in-on-scroll">
-          <h3 class="font-display text-3xl md:text-4xl font-light text-foreground mb-4">Momentum</h3>
-          <div class="w-12 h-0.5 bg-accent mx-auto mb-5"></div>
-          <p class="font-body text-muted-foreground leading-relaxed">We help you build systems and take action that creates real, lasting progress. One step at a time.</p>
+      </div>
+
+      <div class="approach-item reveal">
+        <div class="approach-number">03</div>
+        <div class="approach-text">
+          <h3>Momentum</h3>
+          <p class="text-body">We help you build systems and take action that creates real, lasting progress. One step at a time.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Who Joy Fluent Serves Section -->
-  <section class="section-padding gold-gradient-bg-subtle">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16 fade-in-on-scroll">
-        <p class="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 text-center">Who Joy Fluent Serves</p>
-        <h2 class="text-3xl md:text-5xl font-display font-light leading-tight">Built for People Who Are Ready to <span class="italic gold-gradient-text">Move Forward</span></h2>
+  <!-- ==========================================
+       FOUNDER PROFILE — Asymmetric Split
+       ========================================== -->
+  <section class="section bg-cream">
+    <div class="founder-grid">
+      <div class="founder-image-wrap reveal">
+        <div class="founder-image-glow"></div>
+        <div class="founder-carousel" id="founder-carousel">
+          <div class="founder-carousel-slide active">
+            <img src="assets/lindsay-headshot-home.jpeg" alt="Lindsay R. Watson, Founder of Joy Fluent" loading="lazy">
+          </div>
+          <div class="founder-carousel-slide">
+            <img src="assets/home-hero-meeting.jpg" alt="Joy Fluent strategy meeting" loading="lazy">
+          </div>
+        </div>
+        <div class="founder-carousel-dots">
+          <button class="founder-dot active" data-index="0" aria-label="Lindsay headshot"></button>
+          <button class="founder-dot" data-index="1" aria-label="Strategy meeting"></button>
+        </div>
       </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-background rounded-xl p-8 border-l-4 border-accent card-premium-hover fade-in-on-scroll">
-          <h3 class="font-display text-2xl mb-4 text-foreground">Founders & Entrepreneurs</h3>
-          <p class="font-body text-muted-foreground leading-relaxed">You have a vision. Joy Fluent helps you build the strategy and systems to bring it to life without burning out in the process.</p>
-        </div>
-        <div class="bg-background rounded-xl p-8 border-l-4 border-accent card-premium-hover fade-in-on-scroll">
-          <h3 class="font-display text-2xl mb-4 text-foreground">Nonprofits & Mission-Driven Organizations</h3>
-          <p class="font-body text-muted-foreground leading-relaxed">Your mission matters. We help you grow your capacity, strengthen your presence, and create sustainable momentum.</p>
-        </div>
-        <div class="bg-background rounded-xl p-8 border-l-4 border-accent card-premium-hover fade-in-on-scroll">
-          <h3 class="font-display text-2xl mb-4 text-foreground">Small Businesses</h3>
-          <p class="font-body text-muted-foreground leading-relaxed">Whether you are scaling, pivoting, or starting fresh, Joy Fluent helps you build a clear path forward and the confidence to follow it.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Founder Profile Section -->
-  <section class="section-padding bg-background">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div class="flex justify-center md:justify-start fade-in-on-scroll">
-        <div class="relative">
-          <div class="absolute -inset-3 gold-gradient-bg rounded-2xl opacity-20 blur-xl"></div>
-          <img src="assets/lindsay-headshot-home.jpeg" alt="Lindsay R. Watson, Founder of Joy Fluent" class="relative rounded-2xl w-full max-w-sm object-cover shadow-xl" width="512" height="512" loading="lazy">
-        </div>
-      </div>
-      <div class="fade-in-on-scroll">
-        <p class="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4">Meet the Founder</p>
-        <h2 class="text-3xl md:text-5xl font-display font-light leading-tight mb-6">Lindsay R. <span class="italic gold-gradient-text">Watson</span></h2>
-        <p class="font-body text-lg text-muted-foreground leading-relaxed mb-5">Joy Fluent exists because of one person's belief that clarity changes everything.</p>
-        <p class="font-body text-lg text-muted-foreground leading-relaxed mb-5">Lindsay R. Watson is a workforce strategist, coach, and creator of Joyventory — with 20+ years of experience and more than 40,000 professional conversations behind her work. She built Joy Fluent to give founders, small businesses, and nonprofits the strategic infrastructure they need to grow.</p>
-        <p class="font-body text-lg text-muted-foreground leading-relaxed mb-8">For 1:1 coaching, career clarity, and the Joyventory framework, visit Lindsay's personal site.</p>
-        <a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-body font-medium text-accent hover:gap-3 transition-all">
+      <div class="founder-text reveal">
+        <p class="eyebrow">Meet the Founder</p>
+        <h2>Lindsay R. <em class="accent-coral">Watson</em></h2>
+        <p class="text-body text-body-lg">Joy Fluent exists because of one person's belief that clarity changes everything.</p>
+        <p class="text-body">Lindsay R. Watson is a workforce strategist, coach, and creator of Joyventory — with 20+ years of experience and more than 40,000 professional conversations behind her work. She built Joy Fluent to give founders, small businesses, and nonprofits the strategic infrastructure they need to grow.</p>
+        <p class="text-body">For 1:1 coaching, career clarity, and the Joyventory framework, visit Lindsay's personal site.</p>
+        <a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer" class="link-arrow">
           Visit lindsayrwatson.com
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Joyventory Section -->
-  <section class="section-padding bg-dark-section">
-    <div class="max-w-4xl mx-auto text-center fade-in-on-scroll">
-      <p class="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 text-center">Lindsay's Signature Framework</p>
-      <h2 class="text-3xl md:text-5xl font-display font-light leading-tight mb-8">Have You Taken Your <span class="italic gold-gradient-text">Joyventory?</span></h2>
-      <div class="space-y-5 font-body text-lg text-muted-foreground leading-relaxed mb-10 max-w-3xl mx-auto">
-        <p>Joyventory is Lindsay R. Watson's career clarity framework — built on 40,000+ professional conversations and two decades of workforce strategy. Whether you're a founder who feels stuck, a professional at a crossroads, or a leader building a stronger team, Joyventory helps you stop second-guessing and start choosing.</p>
-        <p>It's not a quiz. It's a conversation.</p>
+  <!-- ==========================================
+       WHO WE SERVE — Redesigned Cards
+       ========================================== -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="section-header center">
+        <p class="eyebrow">Who Joy Fluent Serves</p>
+        <h2>Built for People Who Are Ready to <em class="accent-gold">Move Forward</em></h2>
       </div>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gold-gradient-bg btn-swipe-effect btn-swipe-gold px-8 py-4 rounded-md font-body font-semibold text-sm tracking-wide uppercase"><span>Learn About Joyventory</span></a>
-        <a href="https://www.honeybook.com/widget/joy_fluent_llc_262509/cf_id/5fde792f3f13d2619dc9c4b0" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center btn-swipe-effect btn-swipe-outline-coral px-8 py-4 rounded-md font-body font-semibold text-sm tracking-wide uppercase"><span>Book a Session with Lindsay</span></a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Statistics Section -->
-  <section class="section-padding bg-dark-section">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16 fade-in-on-scroll">
-        <p class="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 text-center">Why Joy Fluent</p>
-        <h2 class="text-3xl md:text-5xl font-display font-light leading-tight">Strategy That Meets You <span class="italic gold-gradient-text">Where You Are</span></h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-10 stats-bar-premium">
-        <div class="stats-card-premium fade-in-on-scroll">
-          <p class="stats-number-premium"><span class="counter" data-target="20">0</span>+ Years</p>
-          <p class="stats-label-premium">Of Experience</p>
-          <p class="stats-desc-premium">Joy Fluent is built on decades of real-world experience helping organizations grow, adapt, and thrive.</p>
+      <div class="grid-3 reveal-stagger">
+        <div class="serve-card reveal">
+          <div class="serve-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>Founders & Entrepreneurs</h3>
+          <p class="text-body">You have a vision. Joy Fluent helps you build the strategy and systems to bring it to life without burning out in the process.</p>
         </div>
-        <div class="stats-card-premium fade-in-on-scroll">
-          <p class="stats-number-premium"><span class="counter" data-target="40000">0</span>+</p>
-          <p class="stats-label-premium">Conversations</p>
-          <p class="stats-desc-premium">Our founder has conducted over 40,000 professional interviews. That depth of listening shapes everything we do.</p>
+
+        <div class="serve-card reveal">
+          <div class="serve-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3>Nonprofits & Mission-Driven Organizations</h3>
+          <p class="text-body">Your mission matters. We help you grow your capacity, strengthen your presence, and create sustainable momentum.</p>
         </div>
-        <div class="stats-card-premium fade-in-on-scroll">
-          <p class="stats-number-premium" style="font-size: 3rem !important;">Built for Real</p>
-          <p class="stats-label-premium">Organizations</p>
-          <p class="stats-desc-premium">We work with founders, nonprofits, and growing teams — not just enterprise clients. Practical, personal, proven.</p>
+
+        <div class="serve-card reveal">
+          <div class="serve-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Small Businesses</h3>
+          <p class="text-body">Whether you are scaling, pivoting, or starting fresh, Joy Fluent helps you build a clear path forward and the confidence to follow it.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- How to Work With Us Section -->
-  <section class="section-padding gold-gradient-bg-subtle">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16 fade-in-on-scroll">
-        <p class="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 text-center">How to Work With Us</p>
-        <h2 class="text-3xl md:text-5xl font-display font-light leading-tight">Find Your <span class="italic gold-gradient-text">Way In</span></h2>
-        <p class="font-body text-lg text-muted-foreground max-w-2xl mx-auto mt-6">Whether you need a strategic plan, an ongoing partner, or personal clarity on what's next — there's a clear path forward.</p>
+  <!-- ==========================================
+       JOYVENTORY — Dark Dramatic Section
+       ========================================== -->
+  <section class="section bg-navy joyventory-section">
+    <div class="joyventory-bg-shapes">
+      <div class="joyventory-circle joyventory-circle-1"></div>
+      <div class="joyventory-circle joyventory-circle-2"></div>
+      <div class="joyventory-circle joyventory-circle-3"></div>
+    </div>
+
+    <div class="joyventory-content reveal">
+      <p class="eyebrow">Lindsay's Signature Framework</p>
+      <h2>Have You Taken Your <em class="accent-gold">Joyventory?</em></h2>
+      <p class="text-body">Joyventory is Lindsay R. Watson's career clarity framework — built on 40,000+ professional conversations and two decades of workforce strategy. Whether you're a founder who feels stuck, a professional at a crossroads, or a leader building a stronger team, Joyventory helps you stop second-guessing and start choosing.</p>
+      <p class="text-body">It's not a quiz. It's a conversation.</p>
+      <div class="btn-group">
+        <a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold">Learn About Joyventory</a>
+        <a href="https://calendar.app.google/r31ephYiBzL6X2QCA" target="_blank" rel="noopener noreferrer" class="btn btn-outline-coral">Book a Session with Lindsay</a>
       </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-background rounded-xl p-8 card-premium-hover card-glow-hover flex flex-col fade-in-on-scroll">
-          <svg class="card-border-svg" xmlns="http://www.w3.org/2000/svg">
-            <path class="card-border-path" fill="none" stroke="#df9920" stroke-width="3.25"/>
-          </svg>
-          <div class="w-12 h-12 rounded-full gold-gradient-bg flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-compass w-6 h-6 text-primary-foreground"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path><circle cx="12" cy="12" r="10"></circle></svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WHY JOY FLUENT — Stats (previously dark section)
+       Now integrated into the flow above. Moving to
+       HOW TO WORK WITH US next.
+       ========================================== -->
+
+  <!-- ==========================================
+       HOW TO WORK WITH US — Editorial Cards
+       ========================================== -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header center">
+        <p class="eyebrow">How to Work With Us</p>
+        <h2>Find Your <em class="accent-coral">Way In</em></h2>
+        <p class="text-body" style="max-width: 32rem; margin: var(--space-lg) auto 0;">Whether you need a strategic plan, an ongoing partner, or personal clarity on what's next — there's a clear path forward.</p>
+      </div>
+
+      <div class="grid-3 reveal-stagger">
+        <div class="work-card reveal">
+          <div class="work-card-number">01</div>
+          <div class="work-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg>
           </div>
-          <h3 class="font-display text-2xl mb-4 text-foreground">Start with a Roadmap</h3>
-          <p class="font-body text-muted-foreground leading-relaxed mb-6 flex-grow">A focused strategic plan built for your organization. Walk away knowing where you are, what's possible, and exactly what to do next.</p>
-          <a href="roadmaps.html" class="inline-flex items-center gap-2 font-body font-medium text-primary hover:gap-3 transition-all">
-            Explore Roadmaps
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-          </a>
+          <h3>Start with a Roadmap</h3>
+          <p class="text-body">A focused strategic plan built for your organization. Walk away knowing where you are, what's possible, and exactly what to do next.</p>
+          <a href="roadmaps.html" class="link-arrow">Explore Roadmaps <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
         </div>
-        <div class="bg-background rounded-xl p-8 card-premium-hover card-glow-hover flex flex-col fade-in-on-scroll">
-          <svg class="card-border-svg" xmlns="http://www.w3.org/2000/svg">
-            <path class="card-border-path" fill="none" stroke="#df9920" stroke-width="3.25"/>
-          </svg>
-          <div class="w-12 h-12 rounded-full gold-gradient-bg flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6 text-primary-foreground"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+
+        <div class="work-card reveal">
+          <div class="work-card-number">02</div>
+          <div class="work-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3 class="font-display text-2xl mb-4 text-foreground">Partner with Joy Fluent</h3>
-          <p class="font-body text-muted-foreground leading-relaxed mb-6 flex-grow">Ongoing strategy, systems, and execution support for founders, nonprofits, and growing organizations. A real team behind your work.</p>
-          <a href="solutions.html" class="inline-flex items-center gap-2 font-body font-medium text-primary hover:gap-3 transition-all">
-            See Solutions
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-          </a>
+          <h3>Partner with Joy Fluent</h3>
+          <p class="text-body">Ongoing strategy, systems, and execution support for founders, nonprofits, and growing organizations. A real team behind your work.</p>
+          <a href="solutions.html" class="link-arrow">See Solutions <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
         </div>
-        <div class="bg-background rounded-xl p-8 card-premium-hover card-glow-hover flex flex-col fade-in-on-scroll">
-          <svg class="card-border-svg" xmlns="http://www.w3.org/2000/svg">
-            <path class="card-border-path" fill="none" stroke="#df9920" stroke-width="3.25"/>
-          </svg>
-          <div class="w-12 h-12 rounded-full gold-gradient-bg flex items-center justify-center mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-6 h-6 text-primary-foreground"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+
+        <div class="work-card reveal">
+          <div class="work-card-number">03</div>
+          <div class="work-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <h3 class="font-display text-2xl mb-4 text-foreground">Work with Lindsay Directly</h3>
-          <p class="font-body text-muted-foreground leading-relaxed mb-6 flex-grow">For 1:1 coaching, career clarity, and the Joyventory framework — visit Lindsay's personal site and book a session.</p>
-          <a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-body font-medium text-primary hover:gap-3 transition-all">
-            Visit lindsayrwatson.com
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-          </a>
+          <h3>Work with Lindsay Directly</h3>
+          <p class="text-body">For 1:1 coaching, career clarity, and the Joyventory framework — visit Lindsay's personal site and book a session.</p>
+          <a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer" class="link-arrow">Visit lindsayrwatson.com <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Start With a Plan Section -->
-  <section class="section-padding bg-background">
-    <div class="max-w-4xl mx-auto text-center fade-in-on-scroll">
-      <p class="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4 text-center">Start With a Plan</p>
-      <h2 class="text-3xl md:text-5xl font-display font-light leading-tight mb-8">Most Founders do not need another service. They need a <span class="italic gold-gradient-text">roadmap.</span></h2>
-      <p class="font-body text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl mx-auto">A Joy Fluent Roadmap is a focused, strategic plan built specifically for your organization. It gives you clarity on where you are, what is possible, and exactly what to do next.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="roadmaps.html" class="inline-flex items-center justify-center gold-gradient-bg btn-swipe-effect btn-swipe-gold px-8 py-4 rounded-md font-body font-semibold text-sm tracking-wide uppercase"><span>Learn About Roadmaps</span></a>
-        <a href="contact.html" class="inline-flex items-center justify-center btn-swipe-effect btn-swipe-outline-coral px-8 py-4 rounded-md font-body font-semibold text-sm tracking-wide uppercase"><span>Contact Us</span></a>
+  <!-- ==========================================
+       START WITH A PLAN — Split Layout
+       ========================================== -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="roadmap-split">
+        <div class="roadmap-text reveal">
+          <p class="eyebrow">Start With a Plan</p>
+          <h2>Most Founders do not need another service. They need a <em class="accent-coral">roadmap.</em></h2>
+          <p class="text-body">A Joy Fluent Roadmap is a focused, strategic plan built specifically for your organization. It gives you clarity on where you are, what is possible, and exactly what to do next.</p>
+          <div class="btn-group" style="justify-content: flex-start;">
+            <a href="roadmaps.html" class="btn btn-gold">Learn About Roadmaps</a>
+            <a href="contact.html" class="btn btn-outline-coral">Contact Us</a>
+          </div>
+        </div>
+        <div class="roadmap-image reveal">
+          <img src="roadmap.png" alt="Joy Fluent Roadmap — strategic planning framework" loading="lazy">
+        </div>
       </div>
     </div>
   </section>
-  <section class="section-padding bg-background fade-in-on-scroll">
-    <div class="max-w-6xl mx-auto">
-      <div class="mb-12">
-        <p class="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4">In Their Words</p>
-        <h2 class="text-3xl md:text-5xl font-display font-light leading-tight max-w-3xl">From spinning to a <span class="italic gold-gradient-text">clear next step.</span></h2>
+
+  <!-- ==========================================
+       TESTIMONIALS — Auto-Play Carousel
+       ========================================== -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">In Their Words</p>
+        <h2>From spinning to a <em class="accent-coral">clear next step.</em></h2>
       </div>
-      
-      <div class="carousel-container">
-        <div class="carousel-track">
-          
-          <!-- Testimonial 1 -->
-          <div class="carousel-card">
-            <div class="testimonial-box-premium">
-              <blockquote class="testimonial-text">"Before working with Joy Fluent, I was struggling with mapping out my transition plan. They helped by identifying tangible steps with a clear plan. Since then, I've had my first consultation booked. What stood out most to me was the discussion around the financial goals of my practice and how to align them with my next steps."</blockquote>
-              <div class="testimonial-header-premium">
+
+      <div class="testimonial-carousel" id="testimonial-carousel">
+        <div class="testimonial-track" id="testimonial-track">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">&ldquo;</div>
+              <p class="testimonial-text">"Before working with Joy Fluent, I was struggling with mapping out my transition plan. They helped by identifying tangible steps with a clear plan. Since then, I've had my first consultation booked. What stood out most to me was the discussion around the financial goals of my practice and how to align them with my next steps."</p>
+              <div class="testimonial-author-row">
                 <div class="testimonial-avatar">EM</div>
-                <div class="testimonial-info-premium">
-                  <p class="testimonial-author-premium">E. Michel</p>
-                  <p class="testimonial-meta-premium">Licensed Practitioner</p>
+                <div class="testimonial-author-info">
+                  <p class="testimonial-author">E. Michel</p>
+                  <p class="testimonial-meta">Licensed Practitioner</p>
                 </div>
               </div>
             </div>
           </div>
-          
-          <!-- Testimonial 2 -->
-          <div class="carousel-card">
-            <div class="testimonial-box-premium">
-              <blockquote class="testimonial-text">"Before working with Joy Fluent, we were not keeping up with evolving technology. They helped by creating us a beautiful, simplified website and offering great ideas that reflected our values. Since then, we've been getting excellent feedback from clients and partners. What stood out most to me was how deeply Lindsay listened and translated our goals into a site that represents us well."</blockquote>
-              <div class="testimonial-header-premium">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">&ldquo;</div>
+              <p class="testimonial-text">"Before working with Joy Fluent, we were not keeping up with evolving technology. They helped by creating us a beautiful, simplified website and offering great ideas that reflected our values. Since then, we've been getting excellent feedback from clients and partners. What stood out most to me was how deeply Lindsay listened and translated our goals into a site that represents us well."</p>
+              <div class="testimonial-author-row">
                 <div class="testimonial-avatar">SH</div>
-                <div class="testimonial-info-premium">
-                  <p class="testimonial-author-premium">Shelly</p>
-                  <p class="testimonial-meta-premium">National Coalition Building Institute</p>
+                <div class="testimonial-author-info">
+                  <p class="testimonial-author">Shelly</p>
+                  <p class="testimonial-meta">National Coalition Building Institute</p>
                 </div>
               </div>
             </div>
           </div>
-          
-          <!-- Testimonial 3 -->
-          <div class="carousel-card">
-            <div class="testimonial-box-premium">
-              <blockquote class="testimonial-text">"Before working with Joy Fluent, we were struggling with visibility and staying relevant with the changing times. They provided solutions through thoughtful collaboration, inclusive conversations, and a shared focus on purpose and meaning. Since then, we have a simplified new website that reflects our mission clearly. What stood out most to me was the inclusive and mission-centered way they worked with us."</blockquote>
-              <div class="testimonial-header-premium">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">&ldquo;</div>
+              <p class="testimonial-text">"Before working with Joy Fluent, we were struggling with visibility and staying relevant with the changing times. They provided solutions through thoughtful collaboration, inclusive conversations, and a shared focus on purpose and meaning. Since then, we have a simplified new website that reflects our mission clearly. What stood out most to me was the inclusive and mission-centered way they worked with us."</p>
+              <div class="testimonial-author-row">
                 <div class="testimonial-avatar">LO</div>
-                <div class="testimonial-info-premium">
-                  <p class="testimonial-author-premium">Lori</p>
-                  <p class="testimonial-meta-premium">NCBI</p>
+                <div class="testimonial-author-info">
+                  <p class="testimonial-author">Lori</p>
+                  <p class="testimonial-meta">NCBI</p>
                 </div>
               </div>
             </div>
           </div>
-          
-          <!-- Testimonial 4 -->
-          <div class="carousel-card">
-            <div class="testimonial-box-premium">
-              <blockquote class="testimonial-text">"Before working with Joy Fluent, our website was badly outdated and didn't reflect our community. Joy Fluent listened deeply, understood our vision, and brought it to life with both clarity and design. Since then, they've created a beautiful website that captures who we are. What stood out most to me was Lindsay's ability to hear and translate our organization's heart into the site."</blockquote>
-              <div class="testimonial-header-premium">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">&ldquo;</div>
+              <p class="testimonial-text">"Before working with Joy Fluent, our website was badly outdated and didn't reflect our community. Joy Fluent listened deeply, understood our vision, and brought it to life with both clarity and design. Since then, they've created a beautiful website that captures who we are. What stood out most to me was Lindsay's ability to hear and translate our organization's heart into the site."</p>
+              <div class="testimonial-author-row">
                 <div class="testimonial-avatar">SU</div>
-                <div class="testimonial-info-premium">
-                  <p class="testimonial-author-premium">Sue</p>
-                  <p class="testimonial-meta-premium">NCBI</p>
+                <div class="testimonial-author-info">
+                  <p class="testimonial-author">Sue</p>
+                  <p class="testimonial-meta">NCBI</p>
                 </div>
               </div>
             </div>
           </div>
-          
-          <!-- Testimonial 5 -->
-          <div class="carousel-card">
-            <div class="testimonial-box-premium">
-              <blockquote class="testimonial-text">"Before working with Joy Fluent, I needed help preparing to develop, launch, and maintain my business. Joy Fluent's proactive problem-solving skills and attention to detail helped me organize my ideas and bring structure to the vision. Since then, I've been able to clearly plan my next steps. What stood out most was their attentiveness and deep understanding of our business needs."</blockquote>
-              <div class="testimonial-header-premium">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">&ldquo;</div>
+              <p class="testimonial-text">"Before working with Joy Fluent, I needed help preparing to develop, launch, and maintain my business. Joy Fluent's proactive problem-solving skills and attention to detail helped me organize my ideas and bring structure to the vision. Since then, I've been able to clearly plan my next steps. What stood out most was their attentiveness and deep understanding of our business needs."</p>
+              <div class="testimonial-author-row">
                 <div class="testimonial-avatar">MI</div>
-                <div class="testimonial-info-premium">
-                  <p class="testimonial-author-premium">Michelle</p>
-                  <p class="testimonial-meta-premium">Helping Hands Food Services</p>
+                <div class="testimonial-author-info">
+                  <p class="testimonial-author">Michelle</p>
+                  <p class="testimonial-meta">Helping Hands Food Services</p>
                 </div>
               </div>
             </div>
           </div>
-          
-          <!-- Testimonial 6 -->
-          <div class="carousel-card">
-            <div class="testimonial-box-premium">
-              <blockquote class="testimonial-text">"We weren't facing a specific challenge, but working with Joy Fluent gave us strategic and content support that helped increase our visibility. What stood out most to me was their consistent structure and guidance throughout the process."</blockquote>
-              <div class="testimonial-header-premium">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">&ldquo;</div>
+              <p class="testimonial-text">"We weren't facing a specific challenge, but working with Joy Fluent gave us strategic and content support that helped increase our visibility. What stood out most to me was their consistent structure and guidance throughout the process."</p>
+              <div class="testimonial-author-row">
                 <div class="testimonial-avatar">SE</div>
-                <div class="testimonial-info-premium">
-                  <p class="testimonial-author-premium">Senita</p>
-                  <p class="testimonial-meta-premium">Peace on Patuxent Inc</p>
+                <div class="testimonial-author-info">
+                  <p class="testimonial-author">Senita</p>
+                  <p class="testimonial-meta">Peace on Patuxent Inc</p>
                 </div>
               </div>
             </div>
           </div>
-          
-          <!-- Testimonial 7 -->
-          <div class="carousel-card">
-            <div class="testimonial-box-premium">
-              <blockquote class="testimonial-text">"Before working with Joy Fluent, we were stuck. We didn't have a clear way to share our services or direction for what was next. After meeting and talking with Joy Fluent, our purpose became clear and our plan came to life. Since then, we've seen our business grow with real clarity. What stood out most was the passion behind Joy Fluent—it restored peace to our vision."</blockquote>
-              <div class="testimonial-header-premium">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">&ldquo;</div>
+              <p class="testimonial-text">"Before working with Joy Fluent, we were stuck. We didn't have a clear way to share our services or direction for what was next. After meeting and talking with Joy Fluent, our purpose became clear and our plan came to life. Since then, we've seen our business grow with real clarity. What stood out most was the passion behind Joy Fluent—it restored peace to our vision."</p>
+              <div class="testimonial-author-row">
                 <div class="testimonial-avatar">AE</div>
-                <div class="testimonial-info-premium">
-                  <p class="testimonial-author-premium">Amanda and Eddie</p>
-                  <p class="testimonial-meta-premium">All Around Equine Ministries</p>
+                <div class="testimonial-author-info">
+                  <p class="testimonial-author">Amanda and Eddie</p>
+                  <p class="testimonial-meta">All Around Equine Ministries</p>
                 </div>
               </div>
             </div>
           </div>
- 
-          <!-- Testimonial 8 (NEW from Brian) -->
-          <div class="carousel-card">
-            <div class="testimonial-box-premium">
-              <blockquote class="testimonial-text">"Joy helped me on getting my thoughts in order and to value my abilities in a clearer and more objective way in a very constructive session where she listened to me, understood me and guided me to know how to value my services."</blockquote>
-              <div class="testimonial-header-premium">
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote-mark">&ldquo;</div>
+              <p class="testimonial-text">"Joy helped me on getting my thoughts in order and to value my abilities in a clearer and more objective way in a very constructive session where she listened to me, understood me and guided me to know how to value my services."</p>
+              <div class="testimonial-author-row">
                 <div class="testimonial-avatar">B</div>
-                <div class="testimonial-info-premium">
-                  <p class="testimonial-author-premium">Brian</p>
-                  <p class="testimonial-meta-premium">Intellivet AI</p>
+                <div class="testimonial-author-info">
+                  <p class="testimonial-author">Brian</p>
+                  <p class="testimonial-meta">Intellivet AI</p>
                 </div>
               </div>
             </div>
           </div>
- 
+
         </div>
+
+        <!-- Carousel Nav Dots -->
+        <div class="testimonial-dots" id="testimonial-dots"></div>
       </div>
     </div>
   </section>
 
-  <!-- Not Sure Where to Begin Banner -->
-  <section class="py-20 md:py-28 px-6 md:px-12 cta-banner-premium fade-in-on-scroll">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl md:text-5xl font-display font-normal leading-tight mb-6 text-white">Not Sure Where to <span class="italic font-light">Start?</span></h2>
-      <p class="font-body text-lg text-white/90 leading-relaxed mb-10">That is completely okay. The Start Here page was built for you. Tell us a little about where you are, and we will point you in the right direction.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="start.html" class="inline-flex items-center justify-center btn-white-solid px-8 py-4 rounded-md font-body font-semibold text-sm tracking-wide uppercase hover:-translate-y-0.5 transition-all">Start Here</a>
-        <a href="https://www.honeybook.com/widget/joy_fluent_llc_262509/cf_id/5fde792f3f13d2619dc9c4b0" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center btn-white-outline px-8 py-4 rounded-md font-body font-semibold text-sm tracking-wide uppercase hover:-translate-y-0.5 transition-all">Contact Us</a>
+  <!-- ==========================================
+       FINAL CTA BANNER
+       ========================================== -->
+  <section class="cta-banner reveal">
+    <div class="cta-banner-bg-pattern"></div>
+    <div class="cta-banner-content">
+      <h2>Not Sure Where to <em>Start?</em></h2>
+      <p class="text-body">That is completely okay. The Start Here page was built for you. Tell us a little about where you are, and we will point you in the right direction.</p>
+      <div class="btn-group">
+        <a href="start.html" class="btn btn-white-solid">Start Here</a>
+        <a href="https://calendar.app.google/r31ephYiBzL6X2QCA" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">Contact Us</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
   <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div>
-          <a href="index.html" class="footer-brand-logo">
-            <img alt="Joy Fluent" class="h-14 w-auto mix-blend-multiply" src="assets/joy-fluent-logo.png">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/joy-fluent-logo.png" alt="Joy Fluent">
+        <p class="text-body">Helping founders, small businesses, and nonprofits build the strategy, systems, and sustainable growth.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/joyfluent/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           </a>
-          <p class="font-body text-sm text-muted-foreground leading-relaxed mb-6">
-            Helping founders, small businesses, and nonprofits build the strategy, systems, and sustainable growth.
-          </p>
-          <div class="footer-social-icons">
-            <a href="https://www.instagram.com/joyfluent/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-            </a>
-            <a href="https://www.facebook.com/joyfluent" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-            </a>
-            <a href="https://www.youtube.com/@JoyFluent" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-youtube"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-            </a>
-            <a href="https://www.linkedin.com/company/joyfluent/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-            </a>
-          </div>
-        </div>
-        <div>
-          <h4 class="font-display text-xl font-medium mb-6">Quick Links</h4>
-          <ul class="footer-links-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="start.html">Start Here</a></li>
-            <li><a href="roadmaps.html">Roadmaps</a></li>
-            <li><a href="solutions.html">Solutions</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-display text-xl font-medium mb-6">Lindsay R. Watson</h4>
-          <ul class="footer-links-list">
-            <li><a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer">lindsayrwatson.com</a></li>
-            <li><a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer">Joyventory Framework</a></li>
-            <li><a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer">1:1 Coaching</a></li>
-            <li><a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer">Book Lindsay to Speak</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-display text-xl font-medium mb-6">Our Location</h4>
-          <p class="font-body text-sm text-muted-foreground leading-relaxed mb-4">
-            Lehigh Valley, Pennsylvania, United States
-          </p>
-          <p class="font-body text-sm text-muted-foreground">
-            Email: <a href="mailto:hello@joyfluent.com" class="text-primary hover:underline">hello@joyfluent.com</a>
-          </p>
+          <a href="https://www.facebook.com/joyfluent" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@JoyFluent" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/joyfluent/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Joy Fluent, LLC. All rights reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="accessibility.html">Accessibility Policy</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="contact.html">Contact</a>
-        </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="start.html">Start Here</a></li>
+          <li><a href="roadmaps.html">Roadmaps</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Lindsay R. Watson</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer">lindsayrwatson.com</a></li>
+          <li><a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer">Joyventory Framework</a></li>
+          <li><a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer">1:1 Coaching</a></li>
+          <li><a href="https://www.lindsayrwatson.com" target="_blank" rel="noopener noreferrer">Book Lindsay to Speak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-location">
+        <h4>Our Location</h4>
+        <p class="text-body">Lehigh Valley, Pennsylvania, United States</p>
+        <p class="text-body" style="margin-top: 0.5rem;">
+          Email: <a href="mailto:hello@joyfluent.com">hello@joyfluent.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Joy Fluent, LLC. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="accessibility.html">Accessibility Policy</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
 
-  <!-- Fixed HoneyBook CTA Widget Button -->
-  <a href="https://www.honeybook.com/widget/joy_fluent_llc_262509/cf_id/5fde792f3f13d2619dc9c4b0" target="_blank" rel="noopener noreferrer" class="fixed-contact-button">
+  <!-- Floating Contact Button -->
+  <a href="https://calendar.app.google/r31ephYiBzL6X2QCA" target="_blank" rel="noopener noreferrer" class="floating-contact">
     Contact Us
   </a>
 
   <script src="script.js"></script>
-  <script>
-    document.querySelectorAll('.card-border-svg').forEach(svg => {
-      const path = svg.querySelector('.card-border-path');
-
-      function setPath() {
-        const w = svg.parentElement.offsetWidth;
-        const h = svg.parentElement.offsetHeight;
-        const rx = 12;
-        
-        // Generate rounded rectangle path starting from top-center (w/2, 0)
-        const halfW = w / 2;
-        const d = `M ${halfW} 0 
-                   L ${w - rx} 0 
-                   A ${rx} ${rx} 0 0 1 ${w} ${rx} 
-                   L ${w} ${h - rx} 
-                   A ${rx} ${rx} 0 0 1 ${w - rx} ${h} 
-                   L ${rx} ${h} 
-                   A ${rx} ${rx} 0 0 1 0 ${h - rx} 
-                   L 0 ${rx} 
-                   A ${rx} ${rx} 0 0 1 ${rx} 0 
-                   Z`;
-        path.setAttribute('d', d);
-        
-        const perimeter = path.getTotalLength();
-        path.style.strokeDasharray = perimeter;
-        path.style.strokeDashoffset = perimeter;
-      }
-
-      setPath();
-      window.addEventListener('resize', setPath);
-
-      const card = svg.parentElement;
-
-      card.addEventListener('mouseenter', () => {
-        path.style.transition = 'stroke-dashoffset 0.84s ease';
-        path.style.strokeDashoffset = '0';
-      });
-
-      card.addEventListener('mouseleave', () => {
-        path.style.transition = 'stroke-dashoffset 0.6s ease';
-        const perimeter = path.getTotalLength();
-        path.style.strokeDashoffset = perimeter;
-      });
-    });
-  </script>
 </body>
 </html>
